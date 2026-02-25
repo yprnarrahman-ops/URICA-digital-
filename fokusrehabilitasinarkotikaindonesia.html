@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>Company Profile 2026 – Fasilitas + Struktur + Alur Layanan</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef0f3;
+            font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.5;
+            color: #1e1e2a;
+            padding: 24px 16px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(218, 41, 28, 0.03) 0%, transparent 30%),
+                radial-gradient(circle at 90% 70%, rgba(0, 74, 128, 0.04) 0%, transparent 40%);
+        }
+
+        .profile-book {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            border-radius: 40px 40px 30px 30px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .profile-book::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.02"><path fill="%23004a80" d="M70 30l30 50-30 50h-40l-30-50 30-50h40z"/><circle fill="%23da291c" cx="150" cy="70" r="20"/><circle fill="%23da291c" cx="150" cy="130" r="20"/><text x="30" y="170" font-size="20" font-family="Arial" fill="%23004a80">UNODC</text><text x="130" y="170" font-size="20" font-family="Arial" fill="%23da291c">BNN</text></svg>');
+            background-repeat: repeat;
+            background-size: 180px 180px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .print-float-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #da291c;
+            color: white;
+            border: none;
+            padding: 16px 28px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(218, 41, 28, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid white;
+            transition: 0.2s;
+        }
+
+        .print-float-btn:hover {
+            background: #b21f14;
+            transform: scale(1.03);
+        }
+
+        .header-premium {
+            background: linear-gradient(145deg, #0b0b0f 0%, #1f1f2a 100%);
+            padding: 30px 40px;
+            border-bottom: 8px solid #da291c;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-premium::after {
+            content: "2026";
+            position: absolute;
+            bottom: -18px;
+            right: 50px;
+            background: #da291c;
+            color: white;
+            font-weight: 800;
+            font-size: 1.3rem;
+            padding: 6px 28px;
+            border-radius: 40px;
+            box-shadow: 0 6px 0 #7f150e;
+            z-index: 2;
+        }
+
+        .logo-identity {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-bulat {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #da291c;
+            border: 4px solid white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo-bulat img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .logo-bulat .no-logo {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #da291c;
+            color: white;
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .logo-text h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text .legal-badge {
+            color: #e0a8a4;
+            font-size: 1rem;
+            margin-top: 5px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo-text .legal-badge span {
+            background: rgba(255,255,255,0.06);
+            padding: 4px 12px;
+            border-radius: 40px;
+            border-left: 3px solid #da291c;
+        }
+
+        .sk-number {
+            background: #2c2c3a;
+            padding: 14px 25px;
+            border-radius: 50px;
+            color: #f5cac7;
+            font-weight: 500;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+            border: 1px solid #3e3e50;
+        }
+
+        .tagline-container {
+            background: #f9fafc;
+            padding: 22px 40px;
+            border-bottom: 1px solid #e2e4e9;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: #23233a;
+        }
+
+        .tagline-container i {
+            color: #da291c;
+            margin-right: 20px;
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+
+        /* LATAR BELAKANG */
+        .latar-belakang-section {
+            background: linear-gradient(135deg, #f0f4fa 0%, #ffffff 100%);
+            padding: 35px 40px;
+            margin: 0 0 20px 0;
+            border-bottom: 2px solid #da291c;
+            border-top: 2px solid #da291c;
+            font-size: 1.05rem;
+            color: #1e1e2a;
+            position: relative;
+            z-index: 2;
+        }
+
+        .latar-belakang-section .sub-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .latar-belakang-section .sub-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #da291c;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .latar-belakang-section .sub-header i {
+            font-size: 2.2rem;
+            color: #da291c;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 25px 0 15px;
+            justify-content: space-around;
+        }
+
+        .stat-item {
+            background: white;
+            border-radius: 30px;
+            padding: 15px 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+            border-left: 6px solid #da291c;
+            flex: 1 1 200px;
+        }
+
+        .stat-item .angka {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #da291c;
+            line-height: 1.2;
+        }
+
+        .stat-item .keterangan {
+            font-size: 0.95rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .latar-text {
+            background: rgba(218,41,28,0.02);
+            padding: 20px 25px;
+            border-radius: 24px;
+            margin-top: 15px;
+            border: 1px solid rgba(218,41,28,0.2);
+        }
+
+        .latar-text p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .content-pages {
+            padding: 30px 40px 40px;
+            background: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .chapter {
+            margin-bottom: 48px;
+            border-bottom: 1px dashed #cdd0d9;
+            padding-bottom: 30px;
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .chapter-num {
+            background: #da291c;
+            color: white;
+            width: 54px;
+            height: 54px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: 0 8px 0 #831911;
+        }
+
+        .chapter-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #12121c;
+            letter-spacing: -0.02em;
+        }
+
+        .profil-pimpinan {
+            background: linear-gradient(135deg, #f0f3fe 0%, #ffffff 100%);
+            border-radius: 24px;
+            padding: 30px;
+            border: 2px solid #da291c;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(218,41,28,0.1);
+        }
+
+        .profil-pimpinan h3 {
+            color: #da291c;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #da291c;
+            padding-bottom: 10px;
+        }
+
+        .profil-pimpinan-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .foto-pimpinan {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #f0f2f8;
+            border: 4px solid #da291c;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .foto-pimpinan img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .foto-pimpinan .no-foto {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef0f6;
+            color: #888;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .info-pimpinan {
+            flex: 1;
+        }
+
+        .visi-pimpinan {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9ff;
+            border-radius: 16px;
+            border-left: 5px solid #da291c;
+        }
+
+        .peta-lokasi {
+            background: linear-gradient(135deg, #f0f3fe 0%, #ffffff 100%);
+            border-radius: 24px;
+            padding: 25px;
+            border: 2px solid #da291c;
+            margin-bottom: 30px;
+        }
+
+        .peta-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .peta-gambar {
+            flex: 2;
+            min-width: 300px;
+            height: 250px;
+            background: #f0f2f8;
+            border-radius: 16px;
+            border: 2px dashed #da291c;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .peta-gambar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .peta-gambar .no-peta {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .info-lokasi {
+            flex: 1;
+            background: #f9f9ff;
+            padding: 20px;
+            border-radius: 16px;
+        }
+
+        .akreditasi-card {
+            background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+            border-radius: 24px;
+            padding: 25px;
+            border: 3px solid #da291c;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(218,41,28,0.15);
+        }
+
+        .akreditasi-card::before {
+            content: "AKREDITASI & SERTIFIKASI";
+            position: absolute;
+            top: -12px;
+            left: 30px;
+            background: #da291c;
+            color: white;
+            padding: 5px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .akreditasi-dua-kolom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .akreditasi-item {
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            border: 2px solid #f0e0e0;
+            position: relative;
+        }
+
+        .akreditasi-item.kemensos {
+            border-left: 5px solid #da291c;
+        }
+
+        .akreditasi-item.sni {
+            border-left: 5px solid #ffaa00;
+        }
+
+        .badge {
+            background: #da291c;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .badge-sni {
+            background: #ffaa00;
+            color: #1e1e2a;
+        }
+
+        .akreditasi-upload {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+        }
+
+        .maklumat-card {
+            background: linear-gradient(135deg, #f9f2f1 0%, #fff9f8 100%);
+            border-radius: 24px;
+            padding: 25px;
+            border: 2px solid #da291c;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(218,41,28,0.1);
+        }
+
+        .maklumat-card h3 {
+            color: #da291c;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .maklumat-text {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #da291c;
+            font-style: italic;
+        }
+
+        .visi-misi-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .visi-box, .misi-box {
+            background: #f0f3fe;
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid #da291c;
+        }
+
+        .data-section {
+            background: #f0f3fe;
+            border-radius: 36px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .data-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: #1e1e2a;
+            font-weight: 700;
+        }
+
+        .fasilitas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .fasilitas-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid #e0e4f0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .fasilitas-card:hover {
+            border-color: #da291c;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(218,41,28,0.1);
+        }
+
+        .fasilitas-preview {
+            width: 100%;
+            height: 160px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 2px dashed #ccc;
+            overflow: hidden;
+        }
+
+        .fasilitas-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .no-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        .struktur-container, .alur-container {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #da291c;
+        }
+
+        .struktur-preview, .alur-preview {
+            width: 100%;
+            min-height: 250px;
+            background: #f5f5f5;
+            border-radius: 12px;
+            border: 2px dashed #da291c;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .no-struktur, .no-alur {
+            width: 100%;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            border: 2px solid #e0e4f0;
+            transition: all 0.3s ease;
+        }
+
+        .staff-card:hover {
+            border-color: #da291c;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(218,41,28,0.1);
+        }
+
+        .staff-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .staff-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #f0f2f8;
+            border: 3px solid #da291c;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .staff-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .no-photo {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef0f6;
+            color: #888;
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .staff-name h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            padding: 2px 4px;
+            border-bottom: 1px dashed #da291c;
+            outline: none;
+            cursor: text;
+        }
+
+        .staff-name p {
+            color: #da291c;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .staff-detail {
+            margin: 15px 0;
+            padding: 12px 0;
+            border-top: 1px dashed #ddd;
+            border-bottom: 1px dashed #ddd;
+            font-size: 0.9rem;
+        }
+
+        .detail-row {
+            display: flex;
+            margin: 8px 0;
+        }
+
+        .detail-label {
+            width: 100px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .staff-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-upload-photo, .btn-upload-sertif {
+            padding: 8px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: none;
+            color: white;
+            flex: 1;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn-upload-photo {
+            background: #1e1e2a;
+            border: 2px solid #da291c;
+        }
+
+        .btn-upload-photo:hover {
+            background: #2a2a3a;
+        }
+
+        .btn-upload-sertif {
+            background: #2a5c8a;
+            border: 2px solid #1a3f5c;
+        }
+
+        .btn-upload-sertif:hover {
+            background: #1a3f5c;
+        }
+
+        .btn-reset-photo {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-reset-photo:hover {
+            background: #333;
+        }
+
+        .file-input-hidden {
+            display: none;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border: 1px solid #e0e4f0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 1200px;
+        }
+
+        th {
+            background: #1e1e2a;
+            color: white;
+            padding: 12px 8px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #e0e4f0;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 6px 8px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
+
+        input:focus {
+            border-color: #da291c;
+            outline: none;
+        }
+
+        .btn-add-row {
+            background: #da291c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 15px 0 5px;
+            font-size: 0.9rem;
+        }
+
+        .btn-delete-row {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            cursor: pointer;
+        }
+
+        .kerjasama-container {
+            background: white;
+            border-radius: 24px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px solid #da291c;
+        }
+
+        .kerjasama-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .kerjasama-item {
+            background: linear-gradient(135deg, #f9f9ff 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 20px;
+            border: 2px solid #f0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .kerjasama-item:hover {
+            border-color: #da291c;
+        }
+
+        .kerjasama-tag {
+            display: inline-block;
+            background: #da291c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px 5px 5px 0;
+        }
+
+        .qr-print-section {
+            background: #12121c;
+            color: white;
+            border-radius: 24px;
+            padding: 18px 22px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 0 15px;
+        }
+
+        .qrsim {
+            background: #2d2d42;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #da291c;
+            border: 3px solid #da291c;
+        }
+
+        .footer-legal {
+            background: #0b0b12;
+            color: #9d9daf;
+            padding: 20px 30px;
+            border-top: 8px solid #da291c;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-social a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: #27273b;
+            border-radius: 30px;
+        }
+
+        .footer-social a:hover {
+            background: #da291c;
+        }
+
+        .badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .badges span {
+            background: #27273b;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        @media print {
+            .print-float-btn { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .header-premium { flex-direction: column; align-items: start; }
+            .akreditasi-dua-kolom { grid-template-columns: 1fr; }
+            .staff-header { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-float-btn" onclick="window.print()">
+    <i class="fas fa-print"></i> Cetak Profil 2026
+</button>
+
+<div class="profile-book" id="companyProfile2026">
+
+    <!-- HEADER PREMIUM -->
+    <div class="header-premium">
+        <div class="logo-identity">
+            <div class="logo-bulat" id="logoContainer">
+                <img id="logoImg" src="#" alt="Logo Fokus" style="display: none;">
+                <div class="no-logo" id="noLogo">F</div>
+            </div>
+            <div class="logo-text">
+                <h1>FOKUS REHABILITASI<br>NARKOTIKA INDONESIA</h1>
+                <div class="legal-badge">
+                    <span>SK AHU-0001568.AH.01.07.2020</span>
+                    <span>SNI 8807:2022</span>
+                    <span>AKREDITASI KEMENSOS</span>
+                </div>
+                <label class="btn-upload-photo" for="uploadLogo" style="margin-top:10px; padding:5px 15px; display:inline-block; width:auto;"><i class="fas fa-cloud-upload-alt"></i> Upload Logo</label>
+                <input type="file" class="file-input-hidden" id="uploadLogo" accept="image/*" onchange="uploadLogo(this)">
+            </div>
+        </div>
+        <div class="sk-number">
+            <i class="fas fa-shield-alt" style="color:#da291c;"></i> LEMBAGA REHABILITASI SOSIAL TERAKREDITASI
+        </div>
+    </div>
+
+    <div class="tagline-container">
+        <i class="fas fa-quote-right"></i> <strong>Rehabilitasi Sosial Profesional</strong> 2026
+    </div>
+
+    <!-- LATAR BELAKANG -->
+    <div class="latar-belakang-section">
+        <div class="sub-header">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h2>Latar Belakang: Darurat Narkoba</h2>
+        </div>
+        <div class="stats-container">
+            <div class="stat-item"><div class="angka">3,33 Juta</div><div class="keterangan">Penyalahguna narkoba di Indonesia (BNN 2024)</div></div>
+            <div class="stat-item"><div class="angka">15-24 thn</div><div class="keterangan">Usia produktif yang paling terdampak</div></div>
+            <div class="stat-item"><div class="angka">296 Juta</div><div class="keterangan">Pengguna narkoba di dunia (UNODC)</div></div>
+            <div class="stat-item"><div class="angka">+20%</div><div class="keterangan">Peningkatan global dalam satu dekade</div></div>
+        </div>
+        <div class="latar-text">
+            <p><strong>Indonesia darurat narkoba.</strong> Berdasarkan data BNN (2024), terdapat 3,33 juta jiwa penyalahguna narkoba di Indonesia, didominasi usia produktif 15–24 tahun. Sementara secara global, UNODC mencatat 296 juta orang di dunia menggunakan narkoba dengan peningkatan 20% dalam dekade terakhir. Kondisi ini mengancam masa depan generasi bangsa dan ketahanan nasional.</p>
+            <p><strong>FOKUS Rehabilitasi Narkotika Indonesia hadir sebagai solusi.</strong> Berlandaskan UU No. 35/2009 tentang Narkotika, program P4GN BNN, dan standar rehabilitasi UNODC, kami berkomitmen memberikan pelayanan rehabilitasi profesional, humanis, dan terintegrasi — dari detoksifikasi hingga reintegrasi sosial — untuk mengembalikan mereka yang terjerumus narkoba menjadi pribadi sehat, produktif, dan bermartabat.</p>
+        </div>
+    </div>
+
+    <div class="content-pages">
+
+        <!-- PROFIL PIMPINAN -->
+        <div class="profil-pimpinan">
+            <h3><i class="fas fa-user-tie"></i> Profil Pimpinan</h3>
+            <div class="profil-pimpinan-container">
+                <div class="foto-pimpinan" id="fotoPimpinanContainer">
+                    <img id="fotoPimpinan" src="#" alt="Foto Pimpinan" style="display: none;">
+                    <div class="no-foto" id="noFotoPimpinan">📸 Upload Foto Pimpinan</div>
+                </div>
+                <div class="info-pimpinan">
+                    <p><strong>Nama Lengkap:</strong> Mifta Fariz Boli Malakalu, SH</p>
+                    <p><strong>Jabatan:</strong> Ketua Pimpinan</p>
+                    <div style="margin-top:15px;">
+                        <label class="btn-upload-photo" for="uploadFotoPimpinan" style="padding:8px 20px; width:auto;"><i class="fas fa-cloud-upload-alt"></i> Upload Foto Pimpinan</label>
+                        <input type="file" class="file-input-hidden" id="uploadFotoPimpinan" accept="image/*" onchange="uploadFotoPimpinan(this)">
+                        <button class="btn-reset-photo" onclick="resetFotoPimpinan()" style="margin-left:10px;">🗑️ Hapus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="visi-pimpinan">
+                <h4><i class="fas fa-eye"></i> Visi Kepemimpinan</h4>
+                <p>Mewujudkan lembaga rehabilitasi yang profesional, humanis, dan berintegritas dalam mendukung upaya Pencegahan dan Pemberantasan Penyalahgunaan dan Peredaran Gelap Narkotika (P4GN), serta membangun masyarakat yang sadar, sehat, produktif, dan bebas dari narkoba.</p>
+            </div>
+        </div>
+
+        <!-- PETA LOKASI -->
+        <div class="peta-lokasi">
+            <h3><i class="fas fa-map-marked-alt"></i> Peta Lokasi & Alamat</h3>
+            <div class="peta-container">
+                <div class="peta-gambar" id="petaContainer">
+                    <img id="petaImg" src="#" alt="Peta Lokasi" style="display: none;">
+                    <div class="no-peta" id="noPeta">📸 Upload Gambar Peta / Denah Lokasi</div>
+                </div>
+                <div class="info-lokasi">
+                    <h4><i class="fas fa-location-dot" style="color:#da291c;"></i> Alamat Lengkap</h4>
+                    <p><strong>Jalan:</strong> Jl. Riwayat 1, Marindal 1</p>
+                    <p><strong>Kecamatan:</strong> Patumbak</p>
+                    <p><strong>Kabupaten:</strong> Deli Serdang</p>
+                    <p><strong>Provinsi:</strong> Sumatera Utara</p>
+                    <p><strong>Kode Pos:</strong> 20361</p>
+                    <div style="margin-top:15px;">
+                        <label class="btn-upload-photo" for="uploadPeta" style="padding:8px 20px;"><i class="fas fa-cloud-upload-alt"></i> Upload Peta</label>
+                        <input type="file" class="file-input-hidden" id="uploadPeta" accept="image/*" onchange="uploadPeta(this)">
+                        <button class="btn-reset-photo" onclick="resetPeta()" style="margin-left:10px;">🗑️ Hapus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AKREDITASI CARD -->
+        <div class="akreditasi-card">
+            <div class="akreditasi-dua-kolom">
+                <div class="akreditasi-item kemensos">
+                    <h4><i class="fas fa-certificate" style="color:#da291c;"></i> AKREDITASI KEMENSOS RI</h4>
+                    <p><strong>Fokus Rehabilitasi Narkotika Indonesia</strong></p>
+                    <p>Peringkat: <span class="badge">Baik (B)</span></p>
+                    <p>Nomor Akreditasi: <strong>1764/LRS-BN/IX/2025</strong></p>
+                    <p>Berlaku: <strong>24 Desember 2024 – 24 Desember 2027</strong></p>
+                    <div class="akreditasi-upload">
+                        <div><label style="font-size:0.8rem;">Sertifikat</label> <label class="btn-upload-photo" for="fileAkreditasiKemensos" style="padding:4px;"><i class="fas fa-cloud-upload-alt"></i> Upload</label> <input type="file" class="file-input-hidden" id="fileAkreditasiKemensos" accept=".pdf,.jpg,.jpeg,.png"> <span id="fileAkreditasiKemensosName" style="font-size:0.7rem;"></span></div>
+                        <div><label style="font-size:0.8rem;">SK</label> <label class="btn-upload-photo" for="fileSKAkreditasiKemensos" style="padding:4px;"><i class="fas fa-cloud-upload-alt"></i> Upload</label> <input type="file" class="file-input-hidden" id="fileSKAkreditasiKemensos" accept=".pdf,.jpg,.jpeg,.png"> <span id="fileSKAkreditasiKemensosName" style="font-size:0.7rem;"></span></div>
+                    </div>
+                </div>
+                <div class="akreditasi-item sni">
+                    <h4><i class="fas fa-award" style="color:#ffaa00;"></i> PENGHARGAAN SNI</h4>
+                    <p><strong>Sertifikasi SNI 85% Rawat Inap Tipe III</strong></p>
+                    <p>Pencapaian: <span class="badge badge-sni">85%</span></p>
+                    <p>Tahun Penghargaan: <strong>2022</strong></p>
+                    <p>Standar: <strong>SNI 8807:2022</strong> - Rehabilitasi Sosial</p>
+                    <div class="akreditasi-upload">
+                        <div><label style="font-size:0.8rem;">Sertifikat SNI</label> <label class="btn-upload-photo" for="fileSNIAward" style="padding:4px;"><i class="fas fa-cloud-upload-alt"></i> Upload</label> <input type="file" class="file-input-hidden" id="fileSNIAward" accept=".pdf,.jpg,.jpeg,.png"> <span id="fileSNIAwardName" style="font-size:0.7rem;"></span></div>
+                        <div><label style="font-size:0.8rem;">Piagam</label> <label class="btn-upload-photo" for="fileSNIPiagam" style="padding:4px;"><i class="fas fa-cloud-upload-alt"></i> Upload</label> <input type="file" class="file-input-hidden" id="fileSNIPiagam" accept=".pdf,.jpg,.jpeg,.png"> <span id="fileSNIPiagamName" style="font-size:0.7rem;"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAKLUMAT -->
+        <div class="maklumat-card">
+            <h3><i class="fas fa-handshake"></i> MAKLUMAT PELAYANAN FOKUS</h3>
+            <div class="maklumat-text">Kami menyatakan sanggup menyelenggarakan pelayanan sesuai dengan standar pelayanan yang telah ditetapkan serta berkomitmen untuk memberikan pelayanan terbaik secara profesional, transparan, dan akuntabel.</div>
+            <div class="maklumat-text" style="border-left-color: #333;">Apabila dalam penyelenggaraan pelayanan kami tidak sesuai dengan standar yang telah ditetapkan, kami siap menerima sanksi sesuai dengan ketentuan yang berlaku.</div>
+        </div>
+
+        <!-- VISI MISI -->
+        <div class="visi-misi-container">
+            <div class="visi-box"><h4><i class="fas fa-eye"></i> VISI FOKUS RNI</h4><p>Menjadi lembaga yang profesional, terpercaya, dan berorientasi pada pelayanan sosial yang berkualitas.</p></div>
+            <div class="misi-box"><h4><i class="fas fa-bullseye"></i> MISI FOKUS RNI</h4><ul><li>Memberikan pelayanan sosial secara optimal dan berkesinambungan.</li><li>Meningkatkan kualitas sumber daya manusia yang profesional dan berintegritas.</li><li>Membangun kerja sama dengan berbagai pihak untuk mendukung pelayanan sosial.</li><li>Mewujudkan tata kelola lembaga yang transparan dan akuntabel.</li></ul></div>
+        </div>
+
+        <!-- STRUKTUR ORGANISASI -->
+        <div class="data-section">
+            <h2><i class="fas fa-sitemap"></i> STRUKTUR ORGANISASI</h2>
+            <div class="struktur-container">
+                <div class="struktur-preview" id="strukturPreview">
+                    <img id="strukturImg" src="#" alt="Struktur Organisasi" style="display: none;">
+                    <div class="no-struktur" id="noStruktur">📸 Upload Gambar Struktur Organisasi</div>
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <label class="btn-upload-photo" for="uploadStruktur" style="padding:8px 20px;"><i class="fas fa-cloud-upload-alt"></i> Upload Struktur Organisasi</label>
+                    <input type="file" class="file-input-hidden" id="uploadStruktur" accept="image/*" onchange="uploadStruktur(this)">
+                    <button class="btn-reset-photo" onclick="resetStruktur()">🗑️ Hapus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALUR LAYANAN -->
+        <div class="data-section">
+            <h2><i class="fas fa-diagram-project"></i> ALUR LAYANAN REHABILITASI</h2>
+            <div class="alur-container">
+                <div class="alur-preview" id="alurPreview">
+                    <img id="alurImg" src="#" alt="Alur Layanan" style="display: none;">
+                    <div class="no-alur" id="noAlur">📸 Upload Gambar Alur Layanan / Flowchart</div>
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <label class="btn-upload-photo" for="uploadAlur" style="padding:8px 20px;"><i class="fas fa-cloud-upload-alt"></i> Upload Alur Layanan</label>
+                    <input type="file" class="file-input-hidden" id="uploadAlur" accept="image/*" onchange="uploadAlur(this)">
+                    <button class="btn-reset-photo" onclick="resetAlur()">🗑️ Hapus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FASILITAS UTAMA -->
+        <div class="data-section">
+            <h2><i class="fas fa-building"></i> FASILITAS LEMBAGA</h2>
+            <div style="background: linear-gradient(145deg, #f9f2f1 0%, #fff 100%); border-radius: 24px; padding: 20px; margin-bottom: 30px; border: 2px solid #da291c;">
+                <h3 style="color: #da291c; display: flex; align-items: center; gap: 10px; margin-bottom: 20px;"><i class="fas fa-hotel"></i> FASILITAS UTAMA (KAPASITAS 80 KLIEN)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+                    <!-- Stabilisasi Laki -->
+                    <div style="background: white; border-radius: 20px; padding: 18px;">
+                        <h4 style="display: flex; align-items: center; gap: 8px; color: #da291c;"><i class="fas fa-male"></i> KAMAR KLIEN LAKI-LAKI</h4>
+                        <div class="fasilitas-preview" id="stabilisasiLakiPreview" style="height: 180px;">
+                            <img id="stabilisasiLakiImg" src="#" alt="Kamar Klien Laki-laki" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                            <div class="no-image" id="noStabilisasiLaki">📸 Upload Foto Kamar Laki-laki</div>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <div style="display: flex; gap: 10px;">
+                                <label class="btn-upload-photo" for="uploadStabilisasiLaki" style="flex:1;"><i class="fas fa-cloud-upload-alt"></i> Upload</label>
+                                <input type="file" class="file-input-hidden" id="uploadStabilisasiLaki" accept="image/*" onchange="uploadFasilitasUmum('stabilisasiLaki', this)">
+                                <button class="btn-reset-photo" onclick="resetFasilitasUmum('stabilisasiLaki')">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stabilisasi Perempuan -->
+                    <div style="background: white; border-radius: 20px; padding: 18px;">
+                        <h4 style="display: flex; align-items: center; gap: 8px; color: #da291c;"><i class="fas fa-female"></i> KAMAR KLIEN PEREMPUAN</h4>
+                        <div class="fasilitas-preview" id="stabilisasiPerempuanPreview" style="height: 180px;">
+                            <img id="stabilisasiPerempuanImg" src="#" alt="Kamar Klien Perempuan" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+                            <div class="no-image" id="noStabilisasiPerempuan">📸 Upload Foto Kamar Perempuan</div>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <div style="display: flex; gap: 10px;">
+                                <label class="btn-upload-photo" for="uploadStabilisasiPerempuan" style="flex:1;"><i class="fas fa-cloud-upload-alt"></i> Upload</label>
+                                <input type="file" class="file-input-hidden" id="uploadStabilisasiPerempuan" accept="image/*" onchange="uploadFasilitasUmum('stabilisasiPerempuan', this)">
+                                <button class="btn-reset-photo" onclick="resetFasilitasUmum('stabilisasiPerempuan')">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 style="color: #da291c; margin: 20px 0 15px;"><i class="fas fa-ellipsis-h"></i> FASILITAS PENDUKUNG LAINNYA</h3>
+            <div class="fasilitas-grid" id="fasilitasGrid"></div>
+        </div>
+
+        <!-- KERJASAMA LEMBAGA -->
+        <div class="data-section">
+            <h2><i class="fas fa-handshake"></i> KERJASAMA LEMBAGA</h2>
+            <div class="kerjasama-container">
+                <div class="kerjasama-grid" id="kerjasamaGrid">
+                    <!-- data kerjasama akan diisi via js, tapi sudah ada default -->
+                </div>
+                <div style="margin-top:25px; text-align:center;">
+                    <button class="btn-add-row" onclick="tambahKerjasama()"><i class="fas fa-plus-circle"></i> Tambah Mitra Kerjasama</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== STRUKTUR SDM & TENAGA AHLI (DIPERBAIKI) ========== -->
+        <div class="data-section">
+            <h2><i class="fas fa-users"></i> STRUKTUR SDM & TENAGA AHLI</h2>
+            <p style="margin-bottom:15px; background: #e3e8f5; padding:10px; border-radius:12px;">
+                <strong><i class="fas fa-certificate" style="color:#da291c;"></i> SDM Bersertifikat Nasional & Internasional:</strong> 
+                Seluruh tenaga profesional memiliki sertifikasi sesuai bidangnya. Klik pada nama untuk mengedit.
+            </p>
+            <div class="staff-grid" id="staffGrid"></div>
+        </div>
+
+        <!-- TABEL SERTIFIKASI -->
+        <div class="data-section">
+            <h2><i class="fas fa-certificate"></i> DATA SERTIFIKASI STAFF</h2>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>No</th><th>Nama Staff</th><th>Jabatan</th><th>Nama Sertifikasi</th><th>No. Sertifikat</th><th>Tgl Terbit</th><th>Berlaku</th><th>Penerbit</th><th>File</th><th>Aksi</th></tr></thead>
+                    <tbody id="sertifikasiBody"></tbody>
+                </table>
+                <button class="btn-add-row" onclick="addSertifikasiRow()"><i class="fas fa-plus-circle"></i> Tambah Sertifikasi</button>
+            </div>
+        </div>
+
+        <!-- BAB I-XIII ringkas -->
+        <div class="chapter">
+            <div class="chapter-header"><div class="chapter-num">I</div><div class="chapter-title">PROFIL UMUM LEMBAGA</div></div>
+            <div class="grid-cards">
+                <div class="info-card"><i class="fas fa-building"></i><h4>Identitas</h4>Fokus Rehabilitasi Narkotika Indonesia<br>Berdiri: 2020</div>
+                <div class="info-card"><i class="fas fa-scale-balanced"></i><h4>Legalitas</h4>SK Kemenkumham No. AHU-0001568.AH.01.07.2020<br>SNI 8807:2022</div>
+                <div class="info-card"><i class="fas fa-certificate"></i><h4>Akreditasi</h4>Kemensos RI - Peringkat B<br>SNI Award 85% (2022)</div>
+            </div>
+        </div>
+
+        <!-- QR CODE -->
+        <div class="qr-print-section">
+            <div style="display: flex; gap:12px; align-items:center;"><div class="qrsim"><i class="fas fa-qrcode"></i></div><div><h3 style="color:white;">Profil Digital 2026</h3></div></div>
+            <div style="color:#bdbdd5;">Siap presentasi & legalitas</div>
+        </div>
+
+    </div> <!-- content-pages -->
+
+    <!-- FOOTER -->
+    <div class="footer-legal">
+        <div class="footer-content">
+            <div class="footer-address"><i class="fas fa-map-marker-alt" style="color: #da291c;"></i> Jl. Riwayat 1, Marindal 1, Kec. Patumbak, Kab. Deli Serdang, Sumatera Utara 20361</div>
+            <div class="footer-social"><a href="https://www.instagram.com/fokusrehabilitasi?igsh=MTV3ang4bnluODZ1MQ==" target="_blank"><i class="fab fa-instagram"></i> @fokusrehabilitasi</a></div>
+        </div>
+        <div class="badges"><span>Akreditasi Kemensos B</span><span>SNI Award 85%</span><span>BNN Partner</span><span>ICAP</span></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // ========== DATA STAFF BARU (INDIVIDU) ==========
+    const staffData = [
+        { jabatan: 'Pekerja Sosial', nama: 'Pekerja Sosial 1', nip: '-', pendidikan: 'S1 Kesejahteraan Sosial', sertifikasi: 'Nasional' },
+        { jabatan: 'Konselor Adiksi', nama: 'Konselor Adiksi 1', nip: '-', pendidikan: 'Sertifikasi BNN', sertifikasi: 'Nasional & ICAP' },
+        { jabatan: 'Asisten Konselor', nama: 'Asisten Konselor 1', nip: '-', pendidikan: 'Pelatihan Adiksi', sertifikasi: 'Dalam Sertifikasi' },
+        { jabatan: 'Psikiater', nama: 'dr. Andri Sp.KJ', nip: '197803152010011002', pendidikan: 'Spesialis Kedokteran Jiwa', sertifikasi: 'Sp.KJ' },
+        { jabatan: 'Psikolog', nama: 'Dra. Sari Purnama, M.Psi', nip: '198105152015022001', pendidikan: 'Magister Psikologi', sertifikasi: 'Psikolog Klinis' },
+        { jabatan: 'Dokter', nama: 'dr. Budi Santoso', nip: '-', pendidikan: 'Dokter Umum', sertifikasi: 'Kerja Sama Klinik Tampu Kasih' },
+        { jabatan: 'Perawat', nama: 'Siti Aminah, S.Kep', nip: '-', pendidikan: 'S1 Keperawatan', sertifikasi: 'STR' },
+        { jabatan: 'Staff Religius', nama: 'Ustadz Ahmad Fauzi', nip: '-', pendidikan: 'Pendidikan Agama', sertifikasi: '- ' },
+        { jabatan: 'Pendamping Vokasional', nama: 'Joko Susilo', nip: '-', pendidikan: 'Pelatihan Keterampilan', sertifikasi: '- ' }
+    ];
+
+    // ========== DATA FASILITAS ==========
+    const fasilitasData = [
+        { nama: 'Rumah Konseling', icon: '🏠' }, { nama: 'Assessment Crisis Intervensi', icon: '🆘' }, { nama: 'Ruang Pemeriksaan Medis', icon: '🏥' },
+        { nama: 'Ruang Administrasi', icon: '📋' }, { nama: 'Ruang Olahraga', icon: '⚽' }, { nama: 'Logistik', icon: '📦' },
+        { nama: 'Musholla', icon: '🕌' }, { nama: 'Perpustakaan', icon: '📚' }, { nama: 'Ruang Serbaguna', icon: '🏛️' }, { nama: 'Taman Terapi', icon: '🌳' }
+    ];
+
+    // ========== FUNGSI UPLOAD LOGO ==========
+    window.uploadLogo = function(input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('logoImg').src = e.target.result;
+            document.getElementById('logoImg').style.display = 'block';
+            document.getElementById('noLogo').style.display = 'none';
+            localStorage.setItem('logoFokus', e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+
+    window.uploadFotoPimpinan = function(input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('fotoPimpinan').src = e.target.result;
+            document.getElementById('fotoPimpinan').style.display = 'block';
+            document.getElementById('noFotoPimpinan').style.display = 'none';
+            localStorage.setItem('fotoPimpinan', e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetFotoPimpinan = function() {
+        localStorage.removeItem('fotoPimpinan');
+        document.getElementById('fotoPimpinan').src = '#';
+        document.getElementById('fotoPimpinan').style.display = 'none';
+        document.getElementById('noFotoPimpinan').style.display = 'flex';
+    };
+
+    window.uploadPeta = function(input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('petaImg').src = e.target.result;
+            document.getElementById('petaImg').style.display = 'block';
+            document.getElementById('noPeta').style.display = 'none';
+            localStorage.setItem('petaLokasi', e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetPeta = function() {
+        localStorage.removeItem('petaLokasi');
+        document.getElementById('petaImg').src = '#';
+        document.getElementById('petaImg').style.display = 'none';
+        document.getElementById('noPeta').style.display = 'flex';
+    };
+
+    window.uploadStruktur = function(input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('strukturImg').src = e.target.result;
+            document.getElementById('strukturImg').style.display = 'block';
+            document.getElementById('noStruktur').style.display = 'none';
+            localStorage.setItem('strukturOrganisasi', e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetStruktur = function() {
+        localStorage.removeItem('strukturOrganisasi');
+        document.getElementById('strukturImg').src = '#';
+        document.getElementById('strukturImg').style.display = 'none';
+        document.getElementById('noStruktur').style.display = 'flex';
+    };
+
+    window.uploadAlur = function(input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('alurImg').src = e.target.result;
+            document.getElementById('alurImg').style.display = 'block';
+            document.getElementById('noAlur').style.display = 'none';
+            localStorage.setItem('alurLayanan', e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetAlur = function() {
+        localStorage.removeItem('alurLayanan');
+        document.getElementById('alurImg').src = '#';
+        document.getElementById('alurImg').style.display = 'none';
+        document.getElementById('noAlur').style.display = 'flex';
+    };
+
+    window.uploadFasilitasUmum = function(tipe, input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.getElementById(tipe + 'Img');
+            const no = document.getElementById('no' + tipe.charAt(0).toUpperCase() + tipe.slice(1));
+            img.src = e.target.result;
+            img.style.display = 'block';
+            no.style.display = 'none';
+            localStorage.setItem('fasilitas_' + tipe, e.target.result);
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetFasilitasUmum = function(tipe) {
+        localStorage.removeItem('fasilitas_' + tipe);
+        const img = document.getElementById(tipe + 'Img');
+        const no = document.getElementById('no' + tipe.charAt(0).toUpperCase() + tipe.slice(1));
+        img.src = '#';
+        img.style.display = 'none';
+        no.style.display = 'flex';
+    };
+
+    // ========== RENDER STAFF CARDS (EDITABLE NAMA) ==========
+    const staffGrid = document.getElementById('staffGrid');
+    function renderStaffCards() {
+        staffGrid.innerHTML = '';
+        staffData.forEach((staff, index) => {
+            const savedFoto = localStorage.getItem(`staffFoto_${index}`);
+            const savedSertif = localStorage.getItem(`staffSertif_${index}`);
+            const savedNama = localStorage.getItem(`staffNama_${index}`) || staff.nama;
+            const fotoDisplay = savedFoto ? 'block' : 'none';
+            const noPhotoDisplay = savedFoto ? 'none' : 'flex';
+
+            const card = document.createElement('div');
+            card.className = 'staff-card';
+            card.innerHTML = `
+                <div class="staff-header">
+                    <div class="staff-avatar">
+                        <img id="staffImg_${index}" src="${savedFoto || '#'}" style="display: ${fotoDisplay}; width:100%; height:100%; object-fit:cover;">
+                        <div class="no-photo" id="noPhoto_${index}" style="display: ${noPhotoDisplay};">📸 No Photo</div>
+                    </div>
+                    <div class="staff-name">
+                        <h3 contenteditable="true" data-index="${index}" class="editable-nama" id="staffName_${index}">${savedNama}</h3>
+                        <p>${staff.jabatan}</p>
+                    </div>
+                </div>
+                <div class="staff-detail">
+                    <div class="detail-row"><span class="detail-label">Pendidikan:</span> ${staff.pendidikan}</div>
+                    <div class="detail-row"><span class="detail-label">Sertifikasi:</span> ${staff.sertifikasi}</div>
+                </div>
+                <div class="staff-actions">
+                    <label class="btn-upload-photo" for="uploadFoto_${index}"><i class="fas fa-camera"></i> Foto</label>
+                    <input type="file" class="file-input-hidden" id="uploadFoto_${index}" accept="image/*" onchange="uploadStaffFoto(${index}, this)">
+                    <label class="btn-upload-sertif" for="uploadSertif_${index}"><i class="fas fa-certificate"></i> Sertifikat</label>
+                    <input type="file" class="file-input-hidden" id="uploadSertif_${index}" accept=".pdf,.jpg,.jpeg,.png" onchange="uploadStaffSertif(${index}, this)">
+                    <button class="btn-reset-photo" onclick="resetStaffFoto(${index})"><i class="fas fa-trash"></i> Reset</button>
+                </div>
+                <div style="font-size:0.7rem; margin-top:5px; color:#2a5c8a;" id="sertifName_${index}">${savedSertif ? '📄 ' + savedSertif : ''}</div>
+            `;
+            staffGrid.appendChild(card);
+        });
+
+        // Event listener untuk contenteditable
+        document.querySelectorAll('.editable-nama').forEach(el => {
+            el.addEventListener('blur', function() {
+                const index = this.dataset.index;
+                const newName = this.innerText.trim();
+                localStorage.setItem(`staffNama_${index}`, newName);
+            });
+        });
+    }
+
+    // Fungsi upload staff foto/sertif
+    window.uploadStaffFoto = function(index, input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            localStorage.setItem(`staffFoto_${index}`, e.target.result);
+            document.getElementById(`staffImg_${index}`).src = e.target.result;
+            document.getElementById(`staffImg_${index}`).style.display = 'block';
+            document.getElementById(`noPhoto_${index}`).style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.uploadStaffSertif = function(index, input) {
+        const file = input.files[0];
+        if (!file) return;
+        localStorage.setItem(`staffSertif_${index}`, file.name);
+        document.getElementById(`sertifName_${index}`).innerHTML = '📄 ' + file.name;
+        input.value = '';
+    };
+    window.resetStaffFoto = function(index) {
+        localStorage.removeItem(`staffFoto_${index}`);
+        document.getElementById(`staffImg_${index}`).src = '#';
+        document.getElementById(`staffImg_${index}`).style.display = 'none';
+        document.getElementById(`noPhoto_${index}`).style.display = 'flex';
+    };
+
+    // ========== RENDER FASILITAS ==========
+    const fasilitasGrid = document.getElementById('fasilitasGrid');
+    function renderFasilitas() {
+        fasilitasGrid.innerHTML = '';
+        fasilitasData.forEach((item, index) => {
+            const savedFoto = localStorage.getItem(`fasilitas_${index}`);
+            const fotoDisplay = savedFoto ? 'block' : 'none';
+            const card = document.createElement('div');
+            card.className = 'fasilitas-card';
+            card.innerHTML = `
+                <h4>${item.icon} ${item.nama}</h4>
+                <div class="fasilitas-preview" id="fasilitasPreview_${index}">
+                    <img id="fasilitasImg_${index}" src="${savedFoto || '#'}" style="display: ${fotoDisplay}; width:100%; height:100%; object-fit:cover;">
+                    <div class="no-image" id="noFasilitas_${index}" style="display: ${savedFoto ? 'none' : 'flex'};">📸 Upload Foto</div>
+                </div>
+                <label class="btn-upload-photo" for="uploadFasilitas_${index}" style="margin-top:10px;"><i class="fas fa-cloud-upload-alt"></i> Upload Foto</label>
+                <input type="file" class="file-input-hidden" id="uploadFasilitas_${index}" accept="image/*" onchange="uploadFasilitas(${index}, this)">
+                <button class="btn-reset-photo" onclick="resetFasilitas(${index})" style="margin-top:5px;">🗑️ Hapus</button>
+            `;
+            fasilitasGrid.appendChild(card);
+        });
+    }
+    window.uploadFasilitas = function(index, input) {
+        const file = input.files[0];
+        if (!file || !file.type.startsWith('image/')) return alert('Pilih file gambar');
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            localStorage.setItem(`fasilitas_${index}`, e.target.result);
+            document.getElementById(`fasilitasImg_${index}`).src = e.target.result;
+            document.getElementById(`fasilitasImg_${index}`).style.display = 'block';
+            document.getElementById(`noFasilitas_${index}`).style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+        input.value = '';
+    };
+    window.resetFasilitas = function(index) {
+        localStorage.removeItem(`fasilitas_${index}`);
+        document.getElementById(`fasilitasImg_${index}`).src = '#';
+        document.getElementById(`fasilitasImg_${index}`).style.display = 'none';
+        document.getElementById(`noFasilitas_${index}`).style.display = 'flex';
+    };
+
+    // ========== KERJASAMA DEFAULT ==========
+    const kerjasamaGrid = document.getElementById('kerjasamaGrid');
+    function renderKerjasamaDefault() {
+        kerjasamaGrid.innerHTML = `
+            <div class="kerjasama-item"><h4><i class="fas fa-shield-alt"></i> BNN RI</h4><div class="kerjasama-detail"><p><strong>Jenis Kerjasama:</strong> Rehabilitasi & P4GN</p><p><strong>Nomor MoU:</strong> -</p><p><strong>Berlaku:</strong> -</p><p><strong>Ruang Lingkup:</strong> Rujukan pasien, pelatihan konselor</p><span class="kerjasama-tag">Mitra Strategis</span></div><div class="kerjasama-upload"><label class="btn-upload-photo" for="uploadMoU_BNN"><i class="fas fa-file-pdf"></i> Upload MoU</label><input type="file" class="file-input-hidden" id="uploadMoU_BNN" accept=".pdf" onchange="uploadKerjasama('BNN', this)"><span id="kerjasamaFile_BNN" style="font-size:0.7rem;"></span></div></div>
+            <div class="kerjasama-item"><h4><i class="fas fa-hospital"></i> Klinik Tampu Kasih</h4><div class="kerjasama-detail"><p><strong>Jenis Kerjasama:</strong> Layanan Medis</p><p><strong>Nomor MoU:</strong> -</p><p><strong>Berlaku:</strong> -</p><p><strong>Ruang Lingkup:</strong> Pemeriksaan kesehatan, detoksifikasi</p><span class="kerjasama-tag">Mitra Medis</span></div><div class="kerjasama-upload"><label class="btn-upload-photo" for="uploadMoU_Tampu"><i class="fas fa-file-pdf"></i> Upload MoU</label><input type="file" class="file-input-hidden" id="uploadMoU_Tampu" accept=".pdf" onchange="uploadKerjasama('Tampu', this)"><span id="kerjasamaFile_Tampu" style="font-size:0.7rem;"></span></div></div>
+            <div class="kerjasama-item"><h4><i class="fas fa-building"></i> Dinas Sosial Sumut</h4><div class="kerjasama-detail"><p><strong>Jenis Kerjasama:</strong> Rehabilitasi Sosial</p><p><strong>Nomor MoU:</strong> -</p><p><strong>Berlaku:</strong> -</p><p><strong>Ruang Lingkup:</strong> Rujukan PMKS, pendampingan</p><span class="kerjasama-tag">Pemerintah Daerah</span></div><div class="kerjasama-upload"><label class="btn-upload-photo" for="uploadMoU_Dinsos"><i class="fas fa-file-pdf"></i> Upload MoU</label><input type="file" class="file-input-hidden" id="uploadMoU_Dinsos" accept=".pdf" onchange="uploadKerjasama('Dinsos', this)"><span id="kerjasamaFile_Dinsos" style="font-size:0.7rem;"></span></div></div>
+            <div class="kerjasama-item"><h4><i class="fas fa-globe"></i> ICAP International</h4><div class="kerjasama-detail"><p><strong>Jenis Kerjasama:</strong> Sertifikasi Internasional</p><p><strong>Nomor MoU:</strong> -</p><p><strong>Berlaku:</strong> -</p><p><strong>Ruang Lingkup:</strong> Sertifikasi konselor adiksi</p><span class="kerjasama-tag">Mitra Internasional</span></div><div class="kerjasama-upload"><label class="btn-upload-photo" for="uploadMoU_ICAP"><i class="fas fa-file-pdf"></i> Upload MoU</label><input type="file" class="file-input-hidden" id="uploadMoU_ICAP" accept=".pdf" onchange="uploadKerjasama('ICAP', this)"><span id="kerjasamaFile_ICAP" style="font-size:0.7rem;"></span></div></div>
+        `;
+    }
+    window.uploadKerjasama = function(mitra, input) {
+        if (input.files[0]) {
+            localStorage.setItem(`kerjasama_${mitra}`, input.files[0].name);
+            document.getElementById(`kerjasamaFile_${mitra}`).innerHTML = '📄 ' + input.files[0].name;
+        }
+        input.value = '';
+    };
+    window.tambahKerjasama = function() {
+        const nama = prompt('Nama Mitra Kerjasama:');
+        if (!nama) return;
+        const jenis = prompt('Jenis Kerjasama:');
+        const newIndex = 'Mitra' + Date.now();
+        const div = document.createElement('div');
+        div.className = 'kerjasama-item';
+        div.innerHTML = `
+            <h4><i class="fas fa-handshake"></i> ${nama}</h4>
+            <div class="kerjasama-detail"><p><strong>Jenis Kerjasama:</strong> ${jenis || '-'}</p><p><strong>Nomor MoU:</strong> -</p><p><strong>Berlaku:</strong> -</p><p><strong>Ruang Lingkup:</strong> Sesuai kesepakatan</p><span class="kerjasama-tag">Mitra Baru</span></div>
+            <div class="kerjasama-upload"><label class="btn-upload-photo" for="uploadMoU_${newIndex}"><i class="fas fa-file-pdf"></i> Upload MoU</label><input type="file" class="file-input-hidden" id="uploadMoU_${newIndex}" accept=".pdf" onchange="uploadKerjasama('${newIndex}', this)"><span id="kerjasamaFile_${newIndex}" style="font-size:0.7rem;"></span></div>
+        `;
+        kerjasamaGrid.appendChild(div);
+    };
+
+    // ========== TABEL SERTIFIKASI ==========
+    let sertifikasiData = [
+        { staff: 'Konselor Adiksi 1', jabatan: 'Konselor Adiksi', namaSertif: 'Sertifikasi Konselor Adiksi', noSertif: 'KAU/2024/001', tglTerbit: '2024-01-15', berlaku: '2027-01-15', penerbit: 'BNN & ICAP', file: '' },
+        { staff: 'Pekerja Sosial 1', jabatan: 'Pekerja Sosial', namaSertif: 'Sertifikasi Pekerja Sosial', noSertif: 'PEKSOS/2024/089', tglTerbit: '2024-06-20', berlaku: '2027-06-20', penerbit: 'Kemensos', file: '' }
+    ];
+    function renderSertifikasi() {
+        const tbody = document.getElementById('sertifikasiBody');
+        tbody.innerHTML = '';
+        sertifikasiData.forEach((item, index) => {
+            const row = tbody.insertRow();
+            row.innerHTML = `
+                <td>${index+1}</td>
+                <td><input type="text" value="${item.staff}" onchange="updateSertif(${index}, 'staff', this.value)"></td>
+                <td><input type="text" value="${item.jabatan}" onchange="updateSertif(${index}, 'jabatan', this.value)"></td>
+                <td><input type="text" value="${item.namaSertif}" onchange="updateSertif(${index}, 'namaSertif', this.value)"></td>
+                <td><input type="text" value="${item.noSertif}" onchange="updateSertif(${index}, 'noSertif', this.value)"></td>
+                <td><input type="date" value="${item.tglTerbit}" onchange="updateSertif(${index}, 'tglTerbit', this.value)"></td>
+                <td><input type="date" value="${item.berlaku}" onchange="updateSertif(${index}, 'berlaku', this.value)"></td>
+                <td><input type="text" value="${item.penerbit}" onchange="updateSertif(${index}, 'penerbit', this.value)"></td>
+                <td><label class="btn-upload-photo" style="padding:3px 6px;" for="uploadSertifFile_${index}">📎</label><input type="file" class="file-input-hidden" id="uploadSertifFile_${index}" accept=".pdf,.jpg,.jpeg,.png" onchange="uploadSertifFile(${index}, this)"><span id="sertifFile_${index}" style="font-size:0.65rem;">${item.file}</span></td>
+                <td><button class="btn-delete-row" onclick="deleteSertif(${index})">Hapus</button></td>
+            `;
+        });
+    }
+    window.addSertifikasiRow = function() { sertifikasiData.push({ staff: '', jabatan: '', namaSertif: '', noSertif: '', tglTerbit: '', berlaku: '', penerbit: '', file: '' }); renderSertifikasi(); };
+    window.updateSertif = function(index, field, value) { sertifikasiData[index][field] = value; };
+    window.deleteSertif = function(index) { sertifikasiData.splice(index, 1); renderSertifikasi(); };
+    window.uploadSertifFile = function(index, input) { if (input.files[0]) { sertifikasiData[index].file = input.files[0].name; document.getElementById(`sertifFile_${index}`).innerHTML = input.files[0].name; } input.value = ''; };
+
+    // ========== LOAD SEMUA GAMBAR & INIT ==========
+    function loadAllImages() {
+        const logo = localStorage.getItem('logoFokus'); if (logo) { document.getElementById('logoImg').src = logo; document.getElementById('logoImg').style.display = 'block'; document.getElementById('noLogo').style.display = 'none'; }
+        const foto = localStorage.getItem('fotoPimpinan'); if (foto) { document.getElementById('fotoPimpinan').src = foto; document.getElementById('fotoPimpinan').style.display = 'block'; document.getElementById('noFotoPimpinan').style.display = 'none'; }
+        const peta = localStorage.getItem('petaLokasi'); if (peta) { document.getElementById('petaImg').src = peta; document.getElementById('petaImg').style.display = 'block'; document.getElementById('noPeta').style.display = 'none'; }
+        const struktur = localStorage.getItem('strukturOrganisasi'); if (struktur) { document.getElementById('strukturImg').src = struktur; document.getElementById('strukturImg').style.display = 'block'; document.getElementById('noStruktur').style.display = 'none'; }
+        const alur = localStorage.getItem('alurLayanan'); if (alur) { document.getElementById('alurImg').src = alur; document.getElementById('alurImg').style.display = 'block'; document.getElementById('noAlur').style.display = 'none'; }
+        const stabLaki = localStorage.getItem('fasilitas_stabilisasiLaki'); if (stabLaki) { document.getElementById('stabilisasiLakiImg').src = stabLaki; document.getElementById('stabilisasiLakiImg').style.display = 'block'; document.getElementById('noStabilisasiLaki').style.display = 'none'; }
+        const stabPerem = localStorage.getItem('fasilitas_stabilisasiPerempuan'); if (stabPerem) { document.getElementById('stabilisasiPerempuanImg').src = stabPerem; document.getElementById('stabilisasiPerempuanImg').style.display = 'block'; document.getElementById('noStabilisasiPerempuan').style.display = 'none'; }
+    }
+
+    // ========== AKREDITASI ==========
+    document.getElementById('fileAkreditasiKemensos').addEventListener('change', function(e) { if (e.target.files[0]) { localStorage.setItem('fileAkreditasiKemensos', e.target.files[0].name); document.getElementById('fileAkreditasiKemensosName').innerHTML = '📄 ' + e.target.files[0].name; } });
+    document.getElementById('fileSKAkreditasiKemensos').addEventListener('change', function(e) { if (e.target.files[0]) { localStorage.setItem('fileSKAkreditasiKemensos', e.target.files[0].name); document.getElementById('fileSKAkreditasiKemensosName').innerHTML = '📄 ' + e.target.files[0].name; } });
+    document.getElementById('fileSNIAward').addEventListener('change', function(e) { if (e.target.files[0]) { localStorage.setItem('fileSNIAward', e.target.files[0].name); document.getElementById('fileSNIAwardName').innerHTML = '📄 ' + e.target.files[0].name; } });
+    document.getElementById('fileSNIPiagam').addEventListener('change', function(e) { if (e.target.files[0]) { localStorage.setItem('fileSNIPiagam', e.target.files[0].name); document.getElementById('fileSNIPiagamName').innerHTML = '📄 ' + e.target.files[0].name; } });
+
+    // ========== INIT ==========
+    loadAllImages();
+    renderStaffCards();
+    renderFasilitas();
+    renderKerjasamaDefault();
+    renderSertifikasi();
+})();
+</script>
+</body>
+</html>
